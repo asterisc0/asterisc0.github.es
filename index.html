@@ -2,13 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5;url=index.html">
-    <title>Página de Información</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Recopilación de Datos</title>
 </head>
 <body>
-    <h1>Bienvenido a la Página de Información</h1>
-    <p>Por favor, proporciona la siguiente información:</p>
-    <form id="infoForm">
+    <h1>Formulario de Recopilación de Datos</h1>
+    <form action="/submit" method="post">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required><br>
 
@@ -16,23 +15,31 @@
         <input type="email" id="correo" name="correo" required><br>
 
         <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required><br>
+        <input type="tel" id="telefono" name="telefono"><br>
 
-        <button type="button" onclick="enviarDatos()">Enviar</button>
+        <label for="num_documento">Número de Documento:</label>
+        <input type="text" id="num_documento" name="num_documento" required><br>
+
+        <label for="redes_sociales">Redes Sociales:</label>
+        <input type="text" id="redes_sociales" name="redes_sociales"><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion"><br>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad"><br>
+
+        <label for="profesion">Profesión:</label>
+        <input type="text" id="profesion" name="profesion"><br>
+
+        <label for="empresa">Empresa:</label>
+        <input type="text" id="empresa" name="empresa"><br>
+
+        <label for="sitio_web">Sitio Web:</label>
+        <input type="url" id="sitio_web" name="sitio_web"><br>
+
+        <input type="submit" value="Enviar">
     </form>
-
-    <p>Escanea el siguiente código QR con tu dispositivo:</p>
-    <img src="qrcode.png" alt="Código QR" width="200" height="200">
-    <p>¡La información se recopilará automáticamente!</p>
-
-    <script>
-        function enviarDatos() {
-            var nombre = document.getElementById("nombre").value;
-            var correo = document.getElementById("correo").value;
-            var telefono = document.getElementById("telefono").value;
-
-            // Puedes enviar los datos al servidor aquí (a través de AJAX, por ejemplo)
-        }
-    </script>
+    <img src="qr_code.png" alt="Código QR">
 </body>
 </html>
